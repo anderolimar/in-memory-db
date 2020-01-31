@@ -19,7 +19,10 @@ const Operators = {
     },
     "$in" : (ref, value) => {
       return value.includes(ref);
-    }        
+    },
+    "$lk" : (ref, value) => {
+      return ref.indexOf(value) > -1;
+    }         
 }
 
 module.exports = Operators;
