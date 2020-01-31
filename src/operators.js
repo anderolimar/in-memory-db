@@ -21,7 +21,7 @@ const Operators = {
       return value.includes(ref);
     },
     "$lk" : (ref, value) => {
-      return ref.indexOf(value) > -1;
+      return ref.toLowerCase().indexOf(value.toLowerCase()) > -1;
     }         
 }
 
