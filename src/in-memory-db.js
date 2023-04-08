@@ -48,7 +48,7 @@ class InMemoryDB {
 	    return this.select(collectionName, whereClause, true)[0];
 	}
 	
-	update(collectionName, updateValues, whereClause){
+  update(collectionName, updateValues, whereClause){
     if (!this.hasCollection(collectionName)) throw `Invalid collection ${collectionName}`;
     let first = Object.keys(whereClause).includes("_id");
     delete updateValues["_id"];
@@ -63,7 +63,7 @@ class InMemoryDB {
 		return success;
 	}
 	
-	delete(collectionName, whereClause){
+  delete(collectionName, whereClause){
     if (!this.hasCollection(collectionName)) throw `Invalid collection ${collectionName}`;
     let first = Object.keys(whereClause).includes("_id");
     let success = false;
